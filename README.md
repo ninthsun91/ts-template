@@ -1,5 +1,5 @@
 # Typescript Template
-A TS project template
+A minimal TS project template.
 
 ## How to Start
 
@@ -10,20 +10,22 @@ $ pnpm install
 $ yarn install
 ```
 
+If you use **npm** or **yarn**, you will have to update `.husky/pre-commit`.
+```
+   to your choice of package manager
+   v
+4  pnpm lint-staged
+```
+
 ## What's Inside
 
 ### Typescript
-- typescript
 - @types/node
+- typescript
 - tsconfig-paths
+- tsx
 
 ### Eslint
-- eslint
+- ts-standard
 - husky
 - lint-staged
-- [@ninthsun91/eslint-config](https://github.com/ninthsun91/eslint-config)
-
-### Jest
-- jest
-- ts-jest
-- @types/jest
