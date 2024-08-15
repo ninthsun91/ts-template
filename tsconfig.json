@@ -1,21 +1,16 @@
 {
-  "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "src/*": ["src/*", "dist/*"],
+      "src/*": ["src/*", "dist/*"]
     },
 
-    "target": "ES2022",
-    "module": "CommonJS",
-    "lib": ["ES2022"],
+    "target": "ES2020",
+    "module": "ES2020",
+    "lib": ["ES2023"],
 
     "declaration": true,
     "esModuleInterop": true,
