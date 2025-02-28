@@ -2,12 +2,10 @@
   "name": "ts-template",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "type": "module",
   "scripts": {
     "======================start======================": "",
-    "build": "tsc",
-    "start": "node -r tsconfig-paths/register dist/index.js",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "start": "node -r tsconfig-paths/register dist/esm/src/index.js",
     "======================test======================": "",
     "lint": "eslint --quiet --fix \"{src,test}/**/*.ts\"",
     "lint:ci": "eslint --quiet \"{src,test}/**/*.ts\"",
@@ -19,6 +17,42 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "src/**/*.ts",
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "dist/**/*.d.ts",
+    "dist/**/*.d.ts.map",
+    "!src/**/*_test.ts",
+    "!dist/**/*_test.js",
+    "!dist/**/*_test.js.map",
+    "!dist/**/*_test.d.ts",
+    "!dist/**/*_test.d.ts.map",
+    "!src/**/*.{test,spec}.ts",
+    "!dist/**/*.{test,spec}.js",
+    "!dist/**/*.{test,spec}.js.map",
+    "!dist/**/*.{test,spec}.d.ts",
+    "!dist/**/*.{test,spec}.d.ts.map"
+  ],
+  "main": "./dist/cjs/src/index.js",
+  "module": "./dist/esm/src/index.js",
+  "types": "./dist/esm/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/src/index.d.ts",
+        "default": "./dist/esm/src/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/src/index.d.ts",
+        "default": "./dist/cjs/src/index.js"
+      }
+    }
+  },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@types/node": "^22.13.5",
