@@ -2,7 +2,7 @@ import assert from 'node:assert';
 import fs from 'node:fs/promises';
 import { describe, it, mock } from 'node:test';
 
-import { read } from './read';
+import { read } from './read.js';
 
 describe('read', () => {
   it('should read a file', async () => {
