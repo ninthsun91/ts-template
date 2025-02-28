@@ -7,14 +7,14 @@
   "scripts": {
     "======================start======================": "",
     "build": "tsc",
-    "start": "node -r tsconfig-paths/register --env-file=.env dist/index.js",
-    "dev": "tsx watch --env-file=.env src/index.ts",
+    "start": "node -r tsconfig-paths/register dist/index.js",
     "======================test======================": "",
     "lint": "eslint --quiet --fix \"{src,test}/**/*.ts\"",
     "lint:ci": "eslint --quiet \"{src,test}/**/*.ts\"",
-    "test": "find ./src ./test -name '*.test.ts' | xargs tsx --test --env-file=.env",
+    "test": "find ./src ./test -name '*.test.ts' | xargs tsx --test",
     "======================npm======================": "",
-    "clean": "find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \\;"
+    "clean": "find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \\;",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -25,11 +25,19 @@
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "prettier": "3.5.2",
     "tsconfig-paths": "^4.2.0",
     "tsx": "^4.17.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.25.0"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "eslint --quiet --fix",
+      "prettier --write"
+    ]
   },
   "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
