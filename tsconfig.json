@@ -18,8 +18,9 @@
     "declarationMap": true,
     "skipLibCheck": true,
     "sourceMap": true,
+    "esModuleInterop": true,
 
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "newLine": "lf",
     "removeComments": true,
 
