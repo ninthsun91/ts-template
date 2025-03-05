@@ -53,20 +53,19 @@
       }
     }
   },
-  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.21.0",
-    "@types/node": "^22.13.5",
+    "@types/node": "^22.13.9",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "prettier": "3.5.2",
+    "prettier": "3.5.3",
     "tsconfig-paths": "^4.2.0",
     "tsx": "^4.17.0",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.25.0"
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
