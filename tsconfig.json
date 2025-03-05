@@ -23,6 +23,7 @@
     "verbatimModuleSyntax": false,
     "newLine": "lf",
     "removeComments": true,
+    "erasableSyntaxOnly": true,
 
     "strict": true,
     "exactOptionalPropertyTypes": true,
