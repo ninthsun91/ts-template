@@ -22,7 +22,7 @@
 
     "verbatimModuleSyntax": false,
     "newLine": "lf",
-    "removeComments": true,
+    "removeComments": false,
     "erasableSyntaxOnly": true,
 
     "strict": true,
