@@ -1,2 +1,7 @@
+echo "\n=== pre-commit hook ==="
+
+echo "\n 1. running tests..."
 pnpm test
+
+echo "\n 2. lint & format staged files..."
 pnpm lint-staged
